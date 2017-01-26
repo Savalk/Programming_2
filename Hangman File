@@ -1,0 +1,75 @@
+from graphics import *
+from time import sleep
+
+#Graphics Window Set Up
+win = GraphWin("Hangman", 500, 500)
+win.yUp()
+win.setBackground("white")
+
+#Mini-Animation(?)
+#Intro Text
+#Title Menu(?)
+#Draw Gallows
+line = Line (Point (100, 400), Point (175, 400))
+line.draw(win)
+
+line2 = Line (Point (100, 100), Point (100, 400))
+line2.draw(win)
+
+line3 = Line (Point (50, 100), Point (150, 100))
+line3.draw(win)
+
+#Allow to Choose a Solo or a Multiplayer Game(?)
+#Set Up Multiplayer Game
+def multiplayer():
+    m_word = input("Type a word for the other player to guess")
+    
+
+    if (len(m_word)>10):
+       print ("That word is too big. Please type another word. ")
+       main()
+
+    spaces = ("_" * len(x))
+    Text(Point(spaces))
+
+
+#Draw Text Box
+box = Entry(Point(400, 460), 10)
+box.setSize(20)
+box.draw(win)
+
+#Set up Solo Game
+def solo():
+##Open Word File
+    file = open ("Hangman_Words.txt")
+    s = file.read()
+    words = eval(s)
+    s_word = choice(s)
+##Draw Word Slots
+##Insert Input Box
+##
+    
+#Game Over Splash Screen
+##Text
+##Animation (?)
+#Restart Option
+##If restart--> Return to Title Menu/Selection
+##If quit--> Close Window
+
+
+
+
+#choice(list) = random element of list
+#file = open ("Hangman_Words.txt")
+#s = file.read()
+#words = eval(s)
+
+
+
+#file = open ("filename")
+#s = file.read()
+#words = eval(s)
+
+#file = open ("filename0")
+#s0 = file0.read()
+#words0 = s0.split('|n')
